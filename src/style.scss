@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D0F2F2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        width: 60%;
+        height: 60%;
+        border-radius: 30px;
+        font-family: "Space Mono", serif;
+        color: #7C8887;
+        box-shadow: 0px 0px 20px rgba(177, 177, 177, 0.308);
+        input{
+            width: 80%;
+            font-family: "Space Mono", serif;
+        }
+        #calcArea{ 
+            width: 60%;
+            text-align: left;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            line-height: 0px;
+            margin-left: 50px;
+            #getValuePerson{
+                background-image: url(../images/icon-dollar.svg);
+                background-repeat: no-repeat;
+                background-position: center left 10px;  
+                text-align: right;
+                border-radius: 5px;
+                font-weight: bold;
+                color: #00474B;
+                font-size: 18px;
+                &:focus{
+                    border: 2px solid #58A89D;
+                }
+                
+            }
+            #customValue{
+                width: 80px;
+                height: 50px;
+                background-color: #F3F8FB;
+                font-size: 14px;
+                border-radius: 5px;
+                font-weight: bold;
+                text-align: center;
+                &:focus{
+                    border: 2px solid #58A89D;
+                }
+            }
+            #numberPeople{
+                background-image: url(../images/icon-person.svg);
+                background-repeat: no-repeat;
+                background-position: center left 10px;  
+                text-align: right;
+                font-size: 18px;
+                color: #00474B;
+                border-radius: 5px;
+                font-weight: bold;
+                &:focus{
+                    border: 2px solid #58A89D;
+                }
+            }
+            button{
+                width: 80px;
+                height: 50px;
+                cursor: pointer;
+            }
+            input{
+                background-color: #F3F8FB;
+                border: none;
+                outline: none;
+                height: 50px;
+                padding: 10px;
+            }
+            #numberBtns{
+                display: grid;
+                grid-template-columns: 60px 60px 60px;
+                gap: 30px;
+                justify-content: start;
+                align-items: center;
+                button{
+                    background-color: #00474B;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                    font-family: "Space Mono", serif;
+                    font-weight: bold;
+                    font-size: 16px;
+                    transition: .6s;
+                    &:hover{
+                        background-color: #A7F2E4;
+                        color: #014946;
+
+                    }
+                }
+                
+            }
+        }
+        #ResultSplit{
+            background-color: #00474B;
+            width: 50%;
+            height: 80%;
+            border-radius: 30px;
+            text-align: left;
+            margin-right: 50px;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.497);
+            display: grid;
+            line-height: 32px;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 150px;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding-top: 30px;
+            #totalContaUser{
+                font-size: 32px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: #58A89D;
+            }
+            #btnReset{
+                width: 300px;
+                height: 50px;
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                text-align: center;
+                margin: auto;
+                cursor: pointer;
+                background-color: #a7f2e45a;
+                font-family: "Space Mono", serif;
+                font-size: 18px;
+                color: white;
+
+            }
+            #totalGorjeta{
+                font-size: 32px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: #58A89D;
+            }
+        }
+    }
+}

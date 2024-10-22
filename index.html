@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main>
+    <section id="calcArea">
+      <p>Valor Conta</p>
+      <input type="number" id="billValue">
+      <p>Selecione %</p>
+      <div id="numberBtns">
+        <button id="btn1">5%</button>
+        <button id="btn2">10%</button>
+        <button id="btn3">15%</button>
+        <button id="btn4">25%</button>
+        <button id="btn5">50%</button>
+        <input type="number" id="customValue" placeholder="custom" name="qntd">
+      </div>
+      <p>Numero de pessoas</p>
+    <input type="number" id="numberPeople" placeholder="0">
+    </section>
+  
+    
+    <div id="ResultSplit">
+      <div class="">
+        <h1>Valor </h1>
+        <p id="totalContaUser">0.0</p>
+      </div>
+      <span id="counter1"></span>
+      <div>
+        <h1>Total</h1>
+        <p id="totalGorjeta">0.0</p>
+      </div>
+      <span id="counter02"></span>
+      <button id="btnReset">Reset</button>
+    </div>
+  </main>
+  <script defer src="/src/script.js"></script>
+</body>
+</html>
