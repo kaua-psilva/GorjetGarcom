@@ -19,7 +19,7 @@ body{
         align-items: center;
         background-color: #fff;
         width: 60%;
-        height: 60%;
+        height: 70%;
         border-radius: 30px;
         font-family: "Space Mono", serif;
         color: #7C8887;
@@ -114,8 +114,8 @@ body{
         }
         #ResultSplit{
             background-color: #00474B;
-            width: 50%;
-            height: 80%;
+            width: 60%;
+            height: 90%;
             border-radius: 30px;
             text-align: left;
             margin-right: 50px;
@@ -135,7 +135,7 @@ body{
                 color: #58A89D;
             }
             #btnReset{
-                width: 300px;
+                width: 280px;
                 height: 50px;
                 font-weight: bold;
                 border: none;
@@ -147,6 +147,10 @@ body{
                 font-family: "Space Mono", serif;
                 font-size: 18px;
                 color: white;
+                transition: .4s ease-in-out;
+                &:hover{
+                    background-color: #58A89D;
+                }
 
             }
             #totalGorjeta{

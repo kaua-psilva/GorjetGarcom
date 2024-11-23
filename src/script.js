@@ -17,14 +17,28 @@ function calcularGorjeta() {
 
 
     let Buttons = ['btn1', 'btn2', 'btn3', 'btn4', 'btn5'].map(id => document.getElementById(id));
-    Buttons[0].addEventListener('click', function() {
+    Buttons[0].addEventListener('click', function () {
         porcentage = 5;
         calcularTotais();
     });
-    Buttons[1].addEventListener('click', function() {
+    Buttons[1].addEventListener('click', function () {
         porcentage = 10;
         calcularTotais();
     });
+    Buttons[2].addEventListener('click', function () {
+        porcentage = 15;
+        calcularTotais();
+    });
+    Buttons[3].addEventListener('click', function () {
+        porcentage = 20;
+        calcularTotais();
+    });
+
+    Buttons[4].addEventListener('click', function () {
+        porcentage = 35;
+        calcularTotais();
+    });
+
     function calcularTotais() {
         const totalGorjetaPorPessoa = (contaUser * (porcentage / 100)) / QtdPessoas;
         const totalPorPessoa = (contaUser + totalGorjetaPorPessoa) / QtdPessoas;

@@ -20,7 +20,7 @@ body main {
   align-items: center;
   background-color: #fff;
   width: 60%;
-  height: 60%;
+  height: 70%;
   border-radius: 30px;
   font-family: "Space Mono", serif;
   color: #7C8887;
@@ -113,8 +113,8 @@ body main #calcArea #numberBtns button:hover {
 }
 body main #ResultSplit {
   background-color: #00474B;
-  width: 50%;
-  height: 80%;
+  width: 60%;
+  height: 90%;
   border-radius: 30px;
   text-align: left;
   margin-right: 50px;
@@ -135,7 +135,7 @@ body main #ResultSplit #totalContaUser {
   color: #58A89D;
 }
 body main #ResultSplit #btnReset {
-  width: 300px;
+  width: 280px;
   height: 50px;
   font-weight: bold;
   border: none;
@@ -147,6 +147,10 @@ body main #ResultSplit #btnReset {
   font-family: "Space Mono", serif;
   font-size: 18px;
   color: white;
+  transition: 0.4s ease-in-out;
+}
+body main #ResultSplit #btnReset:hover {
+  background-color: #58A89D;
 }
 body main #ResultSplit #totalGorjeta {
   font-size: 32px;
