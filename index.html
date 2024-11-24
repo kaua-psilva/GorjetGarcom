@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./src/style.css">
-  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Calculadora calculator app</title>
 </head>
-<body>
 
-  <main>
+<body>
+  <h1 id="titleProjeto" data-aos="fade-down">
+    Calculadora de Gorjeta <br> <span>por pessoa</span>
+  </h1>
+  <main data-aos="fade-up">
+
     <section id="calcArea">
       <p>Valor Conta</p>
-      <input type="number" id="billValue">
+      <input type="number" id="billValue" placeholder="Valor Total">
       <p>Selecione %</p>
       <div id="numberBtns">
         <button id="btn1">5%</button>
@@ -23,10 +29,10 @@
         <input type="number" id="customValue" placeholder="custom" name="qntd">
       </div>
       <p>Numero de pessoas</p>
-    <input type="number" id="numberPeople" placeholder="0">
+      <input type="number" id="numberPeople" placeholder="Numero Pessoas">
     </section>
-  
-    
+
+
     <div id="ResultSplit">
       <div class="">
         <h1>Valor </h1>
@@ -40,7 +46,25 @@
       <span id="counter02"></span>
       <button id="btnReset">Reset</button>
     </div>
+    
   </main>
   <script defer src="src/script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script defer>
+    AOS.init({
+      startEvent: 'DOMContentLoaded',
+      initClassName: 'aos-init',
+      animatedClassName: 'aos-animate',
+      useClassNames: true,
+      offset: 10,
+      delay: 0,
+      duration: 2500,
+      easing: 'ease',
+      once: false,
+      mirror: true,
+      anchorPlacement: 'top-bottom',
+    });
+  </script>
 </body>
+
 </html>

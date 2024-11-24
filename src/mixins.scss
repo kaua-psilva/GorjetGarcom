@@ -1,0 +1,101 @@
+@mixin inputStyle {
+    background-color: #F3F8FB;
+    border: none;
+    outline: none;
+    height: 50px;
+    padding: 10px;
+    width: 80%;
+    font-family: "Space Mono", serif;
+    border-radius: 5px;
+    &:focus {
+        border: 2px solid #00474B;
+    }
+    &::placeholder{
+        text-align: right;
+    }
+}
+
+
+@mixin mainContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    width: 60%;
+    height: 70%;
+    border-radius: 30px;
+    font-family: "Space Mono", serif;
+    color: #7C8887;
+    box-shadow: 0px 0px 20px rgba(177, 177, 177, 0.308);
+}
+@mixin mainContent300 {
+    display: block;
+    width: px;
+}
+
+@mixin porcentageBtn {
+    background-color: #00474B;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: "Space Mono", serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .8s ease-in;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.8s;
+
+    &:hover {
+        background-color: #A7F2E4;
+        color: #014946;
+    }
+}
+
+@mixin calcAreaGrid {
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    gap: 30px;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin resultArea {
+    background-color: #00474B;
+    width: 60%;
+    height: 90%;
+    border-radius: 30px;
+    text-align: left;
+    margin-right: 50px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.497);
+    display: grid;
+    line-height: 32px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 150px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+
+@mixin resetBtn {
+    width: 280px;
+    height: 50px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    background-color: #00494D;
+    font-family: "Space Mono", serif;
+    font-size: 18px;
+    color: white;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+        background-color: #61988e;
+    }
+}

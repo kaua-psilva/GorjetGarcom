@@ -13,6 +13,38 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url(../images/pexels-olly-3769144.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: brightness(10%) saturate(0%) blur(2px);
+          backdrop-filter: brightness(10%) saturate(0%) blur(2px);
+}
+body header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+body header #modoAlternar {
+  margin: auto;
+  background-color: white;
+  width: 100px;
+  height: 20px;
+  color: black;
+  display: flex;
+  border-radius: 10px;
+  color: black;
+}
+body #titleProjeto {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Space Mono", serif;
+  text-align: center;
+  line-height: 24px;
+}
+body #titleProjeto span {
+  color: #30adb4;
 }
 body main {
   display: flex;
@@ -26,12 +58,9 @@ body main {
   color: #7C8887;
   box-shadow: 0px 0px 20px rgba(177, 177, 177, 0.308);
 }
-body main input {
-  width: 80%;
-  font-family: "Space Mono", serif;
-}
 body main #calcArea {
   width: 60%;
+  margin: auto;
   text-align: left;
   flex-direction: column;
   display: flex;
@@ -39,6 +68,25 @@ body main #calcArea {
   gap: 30px;
   line-height: 0px;
   margin-left: 50px;
+}
+body main #calcArea #billValue {
+  background-color: #F3F8FB;
+  border: none;
+  outline: none;
+  height: 50px;
+  padding: 10px;
+  width: 80%;
+  font-family: "Space Mono", serif;
+  border-radius: 5px;
+}
+body main #calcArea #billValue:focus {
+  border: 2px solid #00474B;
+}
+body main #calcArea #billValue::-moz-placeholder {
+  text-align: right;
+}
+body main #calcArea #billValue::placeholder {
+  text-align: right;
 }
 body main #calcArea #getValuePerson {
   background-image: url(../images/icon-dollar.svg);
@@ -49,9 +97,6 @@ body main #calcArea #getValuePerson {
   font-weight: bold;
   color: #00474B;
   font-size: 18px;
-}
-body main #calcArea #getValuePerson:focus {
-  border: 2px solid #58A89D;
 }
 body main #calcArea #customValue {
   width: 80px;
@@ -78,17 +123,24 @@ body main #calcArea #numberPeople {
 body main #calcArea #numberPeople:focus {
   border: 2px solid #58A89D;
 }
-body main #calcArea button {
-  width: 80px;
-  height: 50px;
-  cursor: pointer;
-}
 body main #calcArea input {
   background-color: #F3F8FB;
   border: none;
   outline: none;
   height: 50px;
   padding: 10px;
+  width: 80%;
+  font-family: "Space Mono", serif;
+  border-radius: 5px;
+}
+body main #calcArea input:focus {
+  border: 2px solid #00474B;
+}
+body main #calcArea input::-moz-placeholder {
+  text-align: right;
+}
+body main #calcArea input::placeholder {
+  text-align: right;
 }
 body main #calcArea #numberBtns {
   display: grid;
@@ -105,7 +157,11 @@ body main #calcArea #numberBtns button {
   font-family: "Space Mono", serif;
   font-weight: bold;
   font-size: 16px;
-  transition: 0.6s;
+  transition: 0.8s ease-in;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.8s;
 }
 body main #calcArea #numberBtns button:hover {
   background-color: #A7F2E4;
@@ -143,14 +199,14 @@ body main #ResultSplit #btnReset {
   text-align: center;
   margin: auto;
   cursor: pointer;
-  background-color: rgba(167, 242, 228, 0.3529411765);
+  background-color: #00494D;
   font-family: "Space Mono", serif;
   font-size: 18px;
   color: white;
   transition: 0.4s ease-in-out;
 }
 body main #ResultSplit #btnReset:hover {
-  background-color: #58A89D;
+  background-color: #61988e;
 }
 body main #ResultSplit #totalGorjeta {
   font-size: 32px;
