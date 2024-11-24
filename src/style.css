@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
-  margin: 0px;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Space Mono", monospace;
   background-color: #D0F2F2;
   width: 100vw;
   height: 100vh;
@@ -20,197 +21,181 @@ body {
   -webkit-backdrop-filter: brightness(10%) saturate(0%) blur(2px);
           backdrop-filter: brightness(10%) saturate(0%) blur(2px);
 }
-body header {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-body header #modoAlternar {
-  margin: auto;
-  background-color: white;
-  width: 100px;
-  height: 20px;
-  color: black;
-  display: flex;
-  border-radius: 10px;
-  color: black;
-}
-body #titleProjeto {
-  font-size: 32px;
-  margin-bottom: 20px;
+
+#titleProjeto {
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: white;
-  font-family: "Space Mono", serif;
   text-align: center;
-  line-height: 24px;
+  line-height: 1.5;
 }
-body #titleProjeto span {
+#titleProjeto span {
   color: #30adb4;
 }
-body main {
+
+main {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   background-color: #fff;
   width: 60%;
   height: 70%;
-  border-radius: 30px;
-  font-family: "Space Mono", serif;
-  color: #7C8887;
-  box-shadow: 0px 0px 20px rgba(177, 177, 177, 0.308);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(177, 177, 177, 0.3);
+  padding: 2rem;
+  gap: 1rem;
 }
-body main #calcArea {
-  width: 60%;
-  margin: auto;
-  text-align: left;
-  flex-direction: column;
+
+#calcArea {
+  flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  line-height: 0px;
-  margin-left: 50px;
+  flex-direction: column;
+  gap: 1rem;
 }
-body main #calcArea #billValue {
+#calcArea p {
+  color: #7C8887;
+  font-size: 1rem;
+}
+#calcArea input {
   background-color: #F3F8FB;
   border: none;
   outline: none;
-  height: 50px;
-  padding: 10px;
-  width: 80%;
-  font-family: "Space Mono", serif;
+  height: 3rem;
+  padding: 0.5rem;
   border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
 }
-body main #calcArea #billValue:focus {
+#calcArea input:focus {
   border: 2px solid #00474B;
 }
-body main #calcArea #billValue::-moz-placeholder {
+#calcArea input::-moz-placeholder {
   text-align: right;
 }
-body main #calcArea #billValue::placeholder {
+#calcArea input::placeholder {
   text-align: right;
 }
-body main #calcArea #getValuePerson {
-  background-image: url(../images/icon-dollar.svg);
-  background-repeat: no-repeat;
-  background-position: center left 10px;
-  text-align: right;
+#calcArea #numberBtns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+#calcArea #numberBtns button {
+  background-color: #00474B;
+  color: white;
+  border: none;
   border-radius: 5px;
-  font-weight: bold;
-  color: #00474B;
-  font-size: 18px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-body main #calcArea #customValue {
-  width: 80px;
-  height: 50px;
+#calcArea #numberBtns button:hover {
+  background-color: #58A89D;
+}
+#calcArea #numberBtns #customValue {
   background-color: #F3F8FB;
-  font-size: 14px;
-  border-radius: 5px;
-  font-weight: bold;
   text-align: center;
 }
-body main #calcArea #customValue:focus {
+#calcArea #numberBtns #customValue:focus {
   border: 2px solid #58A89D;
 }
-body main #calcArea #numberPeople {
-  background-image: url(../images/icon-person.svg);
-  background-repeat: no-repeat;
-  background-position: center left 10px;
-  text-align: right;
-  font-size: 18px;
-  color: #00474B;
-  border-radius: 5px;
-  font-weight: bold;
-}
-body main #calcArea #numberPeople:focus {
-  border: 2px solid #58A89D;
-}
-body main #calcArea input {
-  background-color: #F3F8FB;
-  border: none;
-  outline: none;
-  height: 50px;
-  padding: 10px;
-  width: 80%;
-  font-family: "Space Mono", serif;
-  border-radius: 5px;
-}
-body main #calcArea input:focus {
-  border: 2px solid #00474B;
-}
-body main #calcArea input::-moz-placeholder {
-  text-align: right;
-}
-body main #calcArea input::placeholder {
-  text-align: right;
-}
-body main #calcArea #numberBtns {
-  display: grid;
-  grid-template-columns: 60px 60px 60px;
-  gap: 30px;
-  justify-content: start;
-  align-items: center;
-}
-body main #calcArea #numberBtns button {
+
+#ResultSplit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   background-color: #00474B;
-  border: none;
-  border-radius: 10px;
   color: white;
-  font-family: "Space Mono", serif;
+  border-radius: 20px;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+#ResultSplit h1 {
+  font-size: 1.5rem;
+}
+#ResultSplit #totalContaUser,
+#ResultSplit #totalGorjeta {
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 16px;
-  transition: 0.8s ease-in;
-  width: 80px;
-  height: 50px;
-  cursor: pointer;
-  transition: 0.8s;
-}
-body main #calcArea #numberBtns button:hover {
-  background-color: #A7F2E4;
-  color: #014946;
-}
-body main #ResultSplit {
-  background-color: #00474B;
-  width: 60%;
-  height: 90%;
-  border-radius: 30px;
-  text-align: left;
-  margin-right: 50px;
-  padding: 10px;
-  color: rgba(255, 255, 255, 0.497);
-  display: grid;
-  line-height: 32px;
-  grid-template-columns: 100px 100px;
-  grid-template-rows: 150px;
-  align-items: flex-start;
-  justify-content: space-around;
-  padding-top: 30px;
-}
-body main #ResultSplit #totalContaUser {
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 10px;
   color: #58A89D;
 }
-body main #ResultSplit #btnReset {
-  width: 280px;
-  height: 50px;
-  font-weight: bold;
+#ResultSplit #btnReset {
+  width: 100%;
+  padding: 1rem;
+  background-color: #00494D;
+  color: white;
   border: none;
   border-radius: 10px;
-  text-align: center;
-  margin: auto;
   cursor: pointer;
-  background-color: #00494D;
-  font-family: "Space Mono", serif;
-  font-size: 18px;
-  color: white;
-  transition: 0.4s ease-in-out;
+  transition: background-color 0.3s;
 }
-body main #ResultSplit #btnReset:hover {
+#ResultSplit #btnReset:hover {
   background-color: #61988e;
 }
-body main #ResultSplit #totalGorjeta {
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #58A89D;
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  main {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+  }
+  #calcArea,
+  #ResultSplit {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #titleProjeto {
+    font-size: 1.8rem;
+  }
+  main {
+    width: 100%;
+    padding: 1rem;
+  }
+  #calcArea {
+    gap: 0.5rem;
+  }
+  #calcArea input {
+    font-size: 0.9rem;
+  }
+  #calcArea #numberBtns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #ResultSplit {
+    padding: 1rem;
+  }
+  #ResultSplit h1 {
+    font-size: 1.2rem;
+  }
+  #ResultSplit #totalContaUser,
+  #ResultSplit #totalGorjeta {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  #titleProjeto {
+    font-size: 1.5rem;
+  }
+  main {
+    width: 100%;
+    gap: 1rem;
+  }
+  #calcArea input {
+    font-size: 0.8rem;
+  }
+  #calcArea #numberBtns {
+    grid-template-columns: 1fr;
+  }
+  #ResultSplit h1 {
+    font-size: 1rem;
+  }
+  #ResultSplit #totalContaUser,
+  #ResultSplit #totalGorjeta {
+    font-size: 1.2rem;
+  }
+  #ResultSplit #btnReset {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=style.css.map */
